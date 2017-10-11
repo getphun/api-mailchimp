@@ -1,12 +1,12 @@
 <?php
 /**
  * Server tester for the module
- * @package admin-mailchimp
+ * @package api-mailchimp
  * @version 0.0.1
  * @upgrade true
  */
 
-namespace AdminMailchimp\Library;
+namespace ApiMailchimp\Library;
 
 class Server{
     static function curlLib(){
