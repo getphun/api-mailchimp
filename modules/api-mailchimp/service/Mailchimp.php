@@ -44,11 +44,14 @@ class Mailchimp
     
     public function create($data){
         $mc = $this->mc->post('lists/' . $this->list . '/members', $data);
-        
+
         if(!$mc){
             $this->last_error = $this->mc->getLastError();
             return false;
         }
+        
+        if($this->check_error($mc))
+            return false;
         
         return $this->format_member($mc);
     }
